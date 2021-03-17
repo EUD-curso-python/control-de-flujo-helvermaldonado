@@ -3,8 +3,13 @@
 usando el bucle while
 """
 
-
-
+naturales=[]
+i= 0
+while i<=100:
+ naturales.append(i)
+ i+=1
+ continue
+#print(naturales)
 
 """Guarde en `acumulado` una lista con el siguiente patrón:
 
@@ -13,6 +18,7 @@ usando el bucle while
 Hasta el número 50.
 """
 
+acumulado=[]
 
 
 
@@ -20,8 +26,12 @@ Hasta el número 50.
 """
 
 
+suma100=0
 
-
+for numero in naturales:
+ suma100=numero+suma100 
+ #print(numero)
+print(suma100) 
 
 
 """Guarde en `tabla100` un string con los primeros 10 múltiplos del número 134, 
