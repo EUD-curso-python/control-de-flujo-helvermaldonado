@@ -8,7 +8,7 @@ i= 0
 while i<=100:
  naturales.append(i)
  i+=1
- continue
+ #continue
 #print(naturales)
 
 """Guarde en `acumulado` una lista con el siguiente patrón:
@@ -18,7 +18,6 @@ while i<=100:
 Hasta el número 50.
 """
 
-acumulado=[]
 
 
 
@@ -31,7 +30,7 @@ suma100=0
 for numero in naturales:
  suma100=numero+suma100 
  #print(numero)
-print(suma100) 
+#print(suma100) 
 
 
 """Guarde en `tabla100` un string con los primeros 10 múltiplos del número 134, 
@@ -42,15 +41,29 @@ separados por coma, así:
 """
 
 
+#tabla100=''
+#listanumeros=[]
+#i=0
+#for mult in listanumeros:
+ #tabla100=listanumeros*134 
 
+  #naturales.append(tabla100)
+
+ #print(numero)
+#print(suma100) 
+
+
+
+#print('tabla100:', tabla100)
 
 
 """Guardar en `multiplos3` la cantidad de números que son múltiplos de 3 y 
 menores a 300 en la lista `lista1` que se define a continuación (la lista 
 está ordenada).
 """
-lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 132, 150, 180, 201, 203, 231, 250, 260, 267, 300, 304, 310, 312, 321, 326]
+#lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 132, 150, 180, 201, 203, 231, 250, 260, 267, 300, 304, 310, 312, 321, 326]
 
+#multiplos3=0
 
 
 
@@ -71,14 +84,16 @@ lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 
 """
 
 
+#regresivo50=[]
 
-
+#regresivo50=list(reversed((1,2,3,4,5,6)))# esto no se debe hacer es ineficiente
+#print(regresivo50)
 
 
 """Invierta la siguiente lista usando el bucle for y guarde el resultado en 
 `invertido` (sin hacer uso de la función `reversed` ni del método `reverse`)
 """
-lista2 = list(range(1, 70, 5))
+#lista2 = list(range(1, 70, 5))
 
 
 
@@ -133,8 +148,13 @@ lista3 = [941, 149, 672, 208, 99, 562, 749, 947, 251, 750, 889, 596, 836, 742, 5
 """Guarde en lista `cubos` el cubo (potencia elevada a la 3) de los números del 
 1 al 100. 
 """
+cubos=[]
+potencia3=0
 
-
+for numero in naturales:
+ potencia3=numero*numero*numero
+ cubos.append(potencia3)
+ print(potencia3) 
 
 
 
