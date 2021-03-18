@@ -82,7 +82,7 @@ while len(tabla100)<10:
 a=+1
 
 ('no es multiplo')    
-print(tabla100)
+#print(tabla100)
 
 
 
@@ -127,7 +127,7 @@ while i>0:
   j-=1
  i-=1
  regresivo50.append(cadena)
-print (regresivo50, '\n')
+#print (regresivo50, '\n')
 #range(50, 0, -1)
 
 
@@ -151,6 +151,50 @@ otros números enteros.
 """
 
 
+aux=0
+c=0
+x=0
+suma=0
+primos=[]
+
+num=37
+
+#Escribir "***Programa Numeros Primos De 1 a 300***"
+
+while num<=300:
+
+ aux=1
+
+ c=0
+
+ while aux<=num:
+
+  if num%aux==0:
+
+   c=c+1
+
+  
+  primos.append(num)
+  aux=aux+1
+
+ 
+
+ if c==2 :
+
+  x=x+1
+
+  suma=suma+num
+  
+ 
+
+ num=num+1
+
+
+
+print( "Hay ",x," Numeros Primos")
+
+print( "Sumatoria ",suma)
+print("primos")
 
 
 
