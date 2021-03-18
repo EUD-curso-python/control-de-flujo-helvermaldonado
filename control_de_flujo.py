@@ -21,7 +21,29 @@ Hasta el número 50.
 
 
 
+#naturales50=[]
 
+
+ii= 1
+
+acumulado=[]
+
+while ii<=50:
+ #jj=ii
+ cadena1=''
+ #while jj<50:
+ cadena1= cadena1 + ' ' + str(ii)
+ # jj+=1
+  #print(cadena1)
+ ii+=1
+ 
+ acumulado.append(cadena1)
+#print ("acumulado", acumulado, '\n')
+cincuenta=''
+#cincuenta= naturales(range (0,50,1))
+print(cincuenta)
+
+#print(list(range(0,50,1))
 
 
 
@@ -48,12 +70,19 @@ separados por coma, así:
 '134,268,...'
 
 """
-tabla100=""
-valor=0
-for multiplo in range (1,11):
- tabla100 += "," + str(valor * multiplo)
-tabla100=tabla100.replace(",","",1)
-#print("tabla100", tabla100)
+a=1
+b=134
+tabla100=[]
+while len(tabla100)<10:
+ #for index in range():
+  if b%a == 0:
+    print('es multiplo de 134:', a)  
+    #tabla100=tabla100 +',' +str(index)
+    tabla100.append(a)
+a=+1
+
+('no es multiplo')    
+print(tabla100)
 
 
 
@@ -88,7 +117,6 @@ multiplos3=len(lista)
 
 naturales50=[]
 i= 50
-
 regresivo50=[]
 
 while i>0:
@@ -97,11 +125,9 @@ while i>0:
  while j>0:
   cadena= cadena + ' ' + str(j)
   j-=1
-  
  i-=1
- 
- naturales50.append(cadena)
-print (naturales50, '\n')
+ regresivo50.append(cadena)
+print (regresivo50, '\n')
 #range(50, 0, -1)
 
 
@@ -172,7 +198,7 @@ cubos=[]
 potencia3=0
 
 for numero in naturales:
- potencia3=numero*numero*numero
+ potencia3=numero**3
  cubos.append(potencia3)
  #print(potencia3) 
 
