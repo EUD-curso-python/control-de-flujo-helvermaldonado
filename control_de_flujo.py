@@ -4,7 +4,7 @@ usando el bucle while
 """
 
 naturales=[]
-i= 0
+i= 1
 while i<=100:
  naturales.append(i)
  i+=1
@@ -17,6 +17,15 @@ while i<=100:
 
 Hasta el número 50.
 """
+
+
+
+
+
+
+
+
+
 
 
 
@@ -39,31 +48,23 @@ separados por coma, así:
 '134,268,...'
 
 """
+tabla100=""
+valor=0
+for multiplo in range (1,11):
+ tabla100 += "," + str(valor * multiplo)
+tabla100=tabla100.replace(",","",1)
+#print("tabla100", tabla100)
 
-
-#tabla100=''
-#listanumeros=[]
-#i=0
-#for mult in listanumeros:
- #tabla100=listanumeros*134 
-
-  #naturales.append(tabla100)
-
- #print(numero)
-#print(suma100) 
-
-
-
-#print('tabla100:', tabla100)
 
 
 """Guardar en `multiplos3` la cantidad de números que son múltiplos de 3 y 
 menores a 300 en la lista `lista1` que se define a continuación (la lista 
 está ordenada).
 """
-#lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 132, 150, 180, 201, 203, 231, 250, 260, 267, 300, 304, 310, 312, 321, 326]
+lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 132, 150, 180, 201, 203, 231, 250, 260, 267, 300, 304, 310, 312, 321, 326]
 
-#multiplos3=0
+lista=[numero for numero in lista1 if numero % 3==0 and numero <300]
+multiplos3=len(lista)
 
 
 
@@ -84,10 +85,29 @@ está ordenada).
 """
 
 
-#regresivo50=[]
 
-#regresivo50=list(reversed((1,2,3,4,5,6)))# esto no se debe hacer es ineficiente
-#print(regresivo50)
+naturales50=[]
+i= 50
+
+regresivo50=[]
+
+while i>0:
+ j=i
+ cadena=''
+ while j>0:
+  cadena= cadena + ' ' + str(j)
+  j-=1
+  
+ i-=1
+ 
+ naturales50.append(cadena)
+print (naturales50, '\n')
+#range(50, 0, -1)
+
+
+
+#regresivo50=list(reversed((naturales50)))# esto no se debe hacer es ineficiente
+#print('regresivo', regresivo50)
 
 
 """Invierta la siguiente lista usando el bucle for y guarde el resultado en 
@@ -154,7 +174,7 @@ potencia3=0
 for numero in naturales:
  potencia3=numero*numero*numero
  cubos.append(potencia3)
- print(potencia3) 
+ #print(potencia3) 
 
 
 
