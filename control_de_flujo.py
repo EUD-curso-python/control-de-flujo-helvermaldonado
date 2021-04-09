@@ -18,37 +18,32 @@ while i<=100:
 Hasta el número 50.
 """
 
-
-
-
 #naturales50=[]
-
-
 ii= 1
-
 acumulado=[]
-
+cadena1=''
 while ii<=50:
- #jj=ii
- cadena1=''
+ jj=ii
+ 
  #while jj<50:
- cadena1= cadena1 + ' ' + str(ii)
+ 
+ cadena1=  cadena1+' '+str(ii)
+ cadena1=cadena1.strip()
+ acumulado.append(cadena1)
+ ii=ii+1
+#print('acumulado: ',acumulado)
+ 
+#print('valor cadena1:',cadena1, ii, jj)
  # jj+=1
   #print(cadena1)
- ii+=1
  
- acumulado.append(cadena1)
+
 #print ("acumulado", acumulado, '\n')
-cincuenta=''
+#cincuenta=''
 #cincuenta= naturales(range (0,50,1))
-print(cincuenta)
+
 
 #print(list(range(0,50,1))
-
-
-
-
-
 
 
 
@@ -72,18 +67,22 @@ separados por coma, así:
 """
 a=1
 b=134
-tabla100=[]
-while len(tabla100)<10:
- #for index in range():
-  if b%a == 0:
-    print('es multiplo de 134:', a)  
-    #tabla100=tabla100 +',' +str(index)
-    tabla100.append(a)
-a=+1
+zz=0
+#zz=''
+qq=''
+tabla100=''
+ltabla100=[]
+for zz in range(1,11):
+     a=zz*b
+     
+     tabla100=tabla100+str(a)+ ','
+      
 
-('no es multiplo')    
-#print(tabla100)
+print("tabla100:",tabla100) 
+#print(ltabla100)
 
+#istaUnida=  listaUnida + str(self.lista[x])
+ #       listaUnida=','.join(listaUnida)
 
 
 """Guardar en `multiplos3` la cantidad de números que son múltiplos de 3 y 
@@ -94,7 +93,7 @@ lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 
 
 lista=[numero for numero in lista1 if numero % 3==0 and numero <300]
 multiplos3=len(lista)
-
+#print("cantidad de numeros: ", multiplos3)
 
 
 
@@ -126,8 +125,9 @@ while i>0:
   cadena= cadena + ' ' + str(j)
   j-=1
  i-=1
+ cadena=cadena.strip()
  regresivo50.append(cadena)
-#print (regresivo50, '\n')
+print ("regresivos50:",regresivo50, '\n')
 #range(50, 0, -1)
 
 
@@ -159,7 +159,6 @@ primos=[]
 
 num=37
 
-#Escribir "***Programa Numeros Primos De 1 a 300***"
 
 while num<=300:
 
@@ -174,27 +173,27 @@ while num<=300:
    c=c+1
 
   
-  primos.append(num)
   aux=aux+1
 
  
 
  if c==2 :
-
+  primos.append(num)
   x=x+1
 
   suma=suma+num
   
+ 
  
 
  num=num+1
 
 
 
-print( "Hay ",x," Numeros Primos")
+#print( "Hay ",x," Numeros Primos")
 
-print( "Sumatoria ",suma)
-print("primos")
+#print( "Sumatoria ",suma)
+#print("primos: ", primos)
 
 
 
@@ -206,6 +205,18 @@ del segundo cada uno se calcula sumando los dos anteriores términos de la serie
 [0, 1, 1, 2, 3, 5, 8, ...]
 
 """
+a=0
+b=1
+c=0
+d=1
+fibonacci=[]
+for k in range(60):
+      fibonacci.append(c) #1
+      #print('fibonacci: ',d,':', a)
+      c=b+a #0+1,1+1, 
+      a=b ##a=1,1
+      b=c #b=1,2
+      d=d+1
 
 
 
@@ -220,7 +231,11 @@ Por ejemplo, el factorial de 5 se calcula así:
 5! = 5 × 4 × 3 × 2 × 1 = 120
 """
 
-
+factorial=1
+n=30
+for i in range(1,n+1):
+  factorial=factorial*i
+#print('factorial: ', factorial )
 
 
 
@@ -232,6 +247,14 @@ lista3 = [941, 149, 672, 208, 99, 562, 749, 947, 251, 750, 889, 596, 836, 742, 5
 
 
 
+pares=[]
+pares=[paro for paro in lista3 if paro%2==0 and paro <80]
+#pares.append(lista3)
+#print('numero par', pares) 
+
+
+#lista=[numero for numero in lista1 if numero % 3==0 and numero <300]
+#multiplos3=len(lista)
 
 
 
@@ -251,6 +274,20 @@ for numero in naturales:
 """Encuentre la suma de la serie 2 +22 + 222 + 2222 + .. hasta sumar 10 términos 
 y guardar resultado en variable `suma_2s` 
 """
+
+l=0
+c=2
+suma_2s=0
+for ff in range (0, 10):
+  suma_2s=int(l)+int(c)*1
+  l=str(l)+str(c)
+  #print("test: ","l:",l,"c:",c, "suma_2s:", suma_2s )
+  
+  #print('suma: ', int(suma_2s))
+  
+  c=2
+  print('serie de la suma: ',l)
+  
 
 
 
