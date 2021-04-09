@@ -70,12 +70,14 @@ b=134
 zz=0
 #zz=''
 qq=''
-tabla100=''
+tabla1000=''
 ltabla100=[]
+
 for zz in range(1,11):
      a=zz*b
      
-     tabla100=tabla100+str(a)+ ','
+     tabla1000=tabla1000+','+str(a)
+     tabla100=str(tabla1000[1:])
       
 
 print("tabla100:",tabla100) 
@@ -127,7 +129,7 @@ while i>0:
  i-=1
  cadena=cadena.strip()
  regresivo50.append(cadena)
-print ("regresivos50:",regresivo50, '\n')
+#print ("regresivos50:",regresivo50, '\n')
 #range(50, 0, -1)
 
 
@@ -139,9 +141,16 @@ print ("regresivos50:",regresivo50, '\n')
 """Invierta la siguiente lista usando el bucle for y guarde el resultado en 
 `invertido` (sin hacer uso de la función `reversed` ni del método `reverse`)
 """
-#lista2 = list(range(1, 70, 5))
-
-
+lista2 = list(range(1, 70, 5))
+print('lista2',lista2)
+invertido=[]
+#aa=0
+print ('len ', len(lista2))
+for aa in range((len(lista2)-1),-1,  -1):
+    print('elemento lista',lista2[aa] )
+    invertido.append(lista2[aa])
+    print('aca voy:', invertido)
+print('invertido: ', invertido)
 
 
 
@@ -205,18 +214,12 @@ del segundo cada uno se calcula sumando los dos anteriores términos de la serie
 [0, 1, 1, 2, 3, 5, 8, ...]
 
 """
-a=0
-b=1
-c=0
-d=1
-fibonacci=[]
-for k in range(60):
-      fibonacci.append(c) #1
-      #print('fibonacci: ',d,':', a)
-      c=b+a #0+1,1+1, 
-      a=b ##a=1,1
-      b=c #b=1,2
-      d=d+1
+fibonacci= [0,1]
+
+for i in range(2, 60):
+  fibonacci.append(fibonacci[-1] + fibonacci[-2])
+#print(fibonacci)
+
 
 
 
@@ -248,13 +251,23 @@ lista3 = [941, 149, 672, 208, 99, 562, 749, 947, 251, 750, 889, 596, 836, 742, 5
 
 
 pares=[]
-pares=[paro for paro in lista3 if paro%2==0 and paro <80]
+#pares=[paro for paro in lista3 if paro%2==0 and paro <80]
 #pares.append(lista3)
 #print('numero par', pares) 
 
 
 #lista=[numero for numero in lista1 if numero % 3==0 and numero <300]
 #multiplos3=len(lista)
+
+for cc in range (0,81, 1):
+    print(lista3)
+    if cc%2==0:
+        pares.append(lista3[cc])
+        print('posicion', cc, 'elemento', lista3[cc])
+print('la lista con posisciones pares', pares) 
+
+
+
 
 
 
@@ -274,20 +287,14 @@ for numero in naturales:
 """Encuentre la suma de la serie 2 +22 + 222 + 2222 + .. hasta sumar 10 términos 
 y guardar resultado en variable `suma_2s` 
 """
+y= 0
 
-l=0
-c=2
-suma_2s=0
-for ff in range (0, 10):
-  suma_2s=int(l)+int(c)*1
-  l=str(l)+str(c)
-  #print("test: ","l:",l,"c:",c, "suma_2s:", suma_2s )
-  
-  #print('suma: ', int(suma_2s))
-  
-  c=2
-  print('serie de la suma: ',l)
-  
+for i in range(0, 11):
+    t = 10 ** i * (10 - i) * 2
+    y = t + y
+suma_2s = y
+#print(suma_2s)
+
 
 
 
@@ -316,4 +323,21 @@ cantidad máxima de asteriscos de 30.
 
 
 
+ast = '*\n'
+c = '******************************\n'
+y = '*'
+for a in range(2, 30):
+  y= '*'
+  y = y * a
+  ast = ast + y + '\n'
+print(ast)
 
+for a in range(29, 0, -1):
+  y = '*'
+  y = y * a
+  c = c + y + '\n'
+print(c)
+
+patron = ast + c
+patron = patron[:-1]
+print(patron)
